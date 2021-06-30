@@ -19,8 +19,16 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Fashion Discovery: A Computer Vision Approach</section>
-				<section>Contents
+				<section>
+					<h1>Fashion Discovery: A Computer Vision Approach</h1>
+				</section>
+
+				<!-- Testing revealjs-animated plugin (not working in github) -->
+				<section>
+					<p class="fragment animated move-to" data-animated-move-to-left="-50%" data-animated-move-to-top="300px" data-animated-duration="3000">One Item</p>
+				</section>
+
+				<section><h1>Contents</h1>
 					<ol>
 					<li>Introduction</li>
 					<li>Overview</li>
@@ -31,6 +39,8 @@
 					<li>Conclusions</li>
 					</ol>
 				</section>
+
+				<section data-external="chapters/intro.html"> </section>
 			</div>
 		</div>
 
@@ -49,8 +59,12 @@
 				slideNumber: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer ],
+
+				dependencies: [{src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true},
+				{src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external],[data-external-replace]' )}}],
 			});
+
 		</script>
 	</body>
 </html>
