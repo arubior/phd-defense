@@ -1,0 +1,460 @@
+<section id="superpixels"
+	 data-background-video="videos/chapter-gray.mp4"
+         data-background-video-loop data-background-video-muted>
+	<h1><p class="fragment fade-in">SUPERPIXEL SEGMENTATION</p></h1>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+          <!--data-background-size="100px" data-background-repeat="repeat"-->
+<h2>INTRODUCTION</h2>
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro1.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro2.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro3.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro4.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro5.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro6.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<img data-src="chapters/superpixels/imgs/intro/intro7.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<em><b>Superpixels:</b></em><br>
+Perceptually meaningful clusters for pixels
+<aside class="notes">
+They carry more information than pixels.<br>
+Superpixels have a perceptual meaning since pixels belonging to a given superpixel share similar visual properties.<br>
+Reduce cost for subsequent tasks (like annotations, talk about other examples)<br>
+They provide a convenient and compact representation of images that can be very useful for computationally demanding problems.<br>
+  </aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>INTRODUCTION</h2>
+<em><b>Oversegmentation</b></em> vs. <em><b>undersegmentation</b></em>
+<img data-src="chapters/superpixels/imgs/oversegmentation.png"; width=auto; height=300px>
+<img data-src="chapters/superpixels/imgs/undersegmentation.png"; width=auto; height=300px>
+<aside class="notes">
+Goal of SPs: reduce image complexity while respecting the boundaries, and at the same time avoid loss of info due to under-segmentation. <br>
+Our goal: reduce the number of SPs without losing information by having bigger superpixels in regions with less information.<br>
+</aside>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/first/first1.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/first/first2.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/first/first3.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>CONTRIBUTIONS</h2>
+	<ul>
+	<li>New boundary-aware initialization method for superpixel centers</li>
+	<li>New energy function (color, Euclidean + geodesic distances)</li>
+	<li>Exhaustive evaluation (7 datasets with 3 metrics)</li>
+	<li>Better VOI than SoA with similar UE and BR</li>
+	</ul>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Graph-based:</h3>
+	<img data-src="chapters/superpixels/imgs/graph/graph1.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Graph-based:</h3>
+	<img data-src="chapters/superpixels/imgs/graph/graph2.png">
+</section>
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Graph-based:</h3>
+	<img data-src="chapters/superpixels/imgs/graph/graph3.png">
+	<aside class="notes">
+	pixel are nodes, edges are similarities<br>
+	memory has been optimized, but excessive uniformity between superpixels due to their tendency to produce small contours<br>
+	</aside>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Seed-growing (SLIC):</h3>
+	<img data-src="chapters/superpixels/imgs/seeds-spx/seed1.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Seed-growing (SLIC):</h3>
+	<img data-src="chapters/superpixels/imgs/seeds-spx/seed2.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Seed-growing (SLIC):</h3>
+	<img data-src="chapters/superpixels/imgs/seeds-spx/seed3.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Seed-growing (SLIC):</h3>
+	<img data-src="chapters/superpixels/imgs/seeds-spx/seed4.png">
+	<aside class="notes">
+	<li>superpixels created from initial positions</li>
+	<li>more efficient than graph-based, but not always better performance</li>
+	</aside>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Coarse-to-fine methods (SEEDS):</h3>
+	<img data-src="chapters/superpixels/imgs/coarse/coarse1.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+	<h2>RELATED WORK</h2>
+	<h3>Coarse-to-fine methods (SEEDS):</h3>
+	<img data-src="chapters/superpixels/imgs/coarse/coarse2.png">
+	<aside class="notes">
+	<li>start from a regular grid and iteratively warp until reaching a termination condition</li>
+	<li>focused on producing regular superpixels with similar sizes</li>
+	</aside>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme1.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme2.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme3.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme4.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme5.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme6.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme7.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme8.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme9.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h2>METHOD</h2>
+<img data-src="chapters/superpixels/imgs/scheme/scheme10.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Boundary detection</h3>
+<img data-src="chapters/superpixels/imgs/boundaries_a.jpg"; width=auto; height=300px>
+<img data-src="chapters/superpixels/imgs/boundaries_b.jpg"; width=auto; height=300px>
+Include reference of Piotr Dollar.
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Seeds initialization</h3>
+<font size="6">
+<ul ul style="list-style-type:none;">
+<li><p class="fragment">1. Regularly distribute the initial seeds in a grid with side $S = \sqrt{N/K}$</p></li>
+<li><p class="fragment">2. Based on edge density inside each $S\times S$ region, add or delete seeds based on $T_{ad} = \dfrac{\sum{e_i}}{N}$:
+\begin{equation}
+\left\{
+\begin{array}{lrcl}
+\text{Add}, & \text{if } \dfrac{\left(\sum_S{e_i}\right)}{S^2} & > & 3\cdot T_{ad} \\
+\text{Delete}, & \text{if } \dfrac{\left(\sum_S{e_i}\right)}{S^2} & < & T_{ad}\\
+\end{array}
+\right.
+\end{equation}
+</p></li>
+<li><p class="fragment">3. Place seeds in the centroid of empty regions larger than $S\times S$</p></li>
+</ul>
+</font>
+</section>
+
+<section data-background-video="chapters/superpixels/videos/seeds.mp4"
+         data-background-video-loop data-background-video-muted>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Seeds initialization</h3>
+<img data-src="chapters/superpixels/imgs/seeds/cafe.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/cartel.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/cartel2.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/img1.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/img2.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/moon.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/perrete.png"; width=auto; height=200px>
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/seedeq/seedeq1.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/seedeq/seedeq2.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/seedeq/seedeq3.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/seedeq/seedeq4.png">
+</section>
+
+<section data-transition="convex-in none-out"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Energy function</h3>
+<img data-src="chapters/superpixels/imgs/energy/energyeq1.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Energy function</h3>
+<img data-src="chapters/superpixels/imgs/energy/energyeq2.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Energy function</h3>
+<img data-src="chapters/superpixels/imgs/energy/energyeq3.png">
+</section>
+
+<section data-transition="none"
+	 data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Energy function</h3>
+<img data-src="chapters/superpixels/imgs/energy/energyeq4.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+\begin{equation}
+E_{lab} = \sqrt{(l_k - l_i)^2 + (a_k - a_i)^2 + (b_k - b_i)^2}
+\end{equation}
+\begin{equation}
+E_{xy} = \sqrt{(x_k - x_i)^2 + (y_k - y_i)^2}
+\end{equation}
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+$E_{geo}$: Distance Transform on Curved Spaces (insert ref.)
+<img data-src="chapters/superpixels/imgs/geo1.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/geo2.png"; width=auto; height=180px>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+$$\alpha = \frac{C}{S}$$
+<img data-src="chapters/superpixels/imgs/compactness/dress.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/1.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/5.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/10.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/15.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/20.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/50.png"; width=auto; height=180px>
+<img data-src="chapters/superpixels/imgs/compactness/100.png"; width=auto; height=180px>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/energy/original.png"; width=auto; height=380px>
+<img data-src="chapters/superpixels/imgs/energy/energy_lab.png"; width=auto; height=380px>
+<img data-src="chapters/superpixels/imgs/energy/energy_xy.png"; width=auto; height=380px>
+<img data-src="chapters/superpixels/imgs/energy/energy_geo.png"; width=auto; height=380px>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Algorithm</h3>
+<pre><code data-line-numbers="1|2|3|4-5|6|7|8|9-12|16|18">Set K, it_max and area_min
+Compute edges of the input image
+Place initial seeds Sk depending on the edges density
+Set label L_i = 0 for each pixel
+Set energy E_i = E_0 for each pixel
+while #iter <= it_max do
+	for each seed S_k do
+		for each pixel in a 2Sx2S region around S_k do
+			Compute the energy E_ik of the pixel w.r.t. S_k
+			if E_ik < E_i then
+				E_i = E_ik
+				L_i = k
+			end if
+		end for
+	end for
+	Update seeds values as S_k = mean(pixels with L_i == k)
+end while
+Merge small superpixels with bigger adjacent ones
+</code></pre>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>Experimental evaluation</h2>
+<h3>Datasets</h3>
+<ul>
+<li>Fashionista (Yamaguchi et al., CVPR 2012)</li>
+<li>BSD (Martin et al., ICCV 2001)</li>
+<li>HorseSeg (Kolesnikov et al., ECCV 2014)</li>
+<li>DogSeg (Kolesnikov et al., ECCV 2014)</li>
+<li>MSRA Salient (Liu et al., PAMI 2011)</li>
+<li>CSSD (Yan et al., arXiv preprint 2014)</li>
+<li>ECSSD (Yan et al., arXiv preprint 2014)</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>Experimental evaluation</h2>
+<h3>Methods</h3>
+<ul>
+<li>Boundary-Aware Superpixel Segmentation (BASS)</li>
+<li>SEEDS (Van den Bergh, IJCV 2015)</li>
+<li>SLIC (Achanta et al., PAMI 2012)</li>
+<li>Yao et al. (CVPR 2015)</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>Experimental evaluation</h2>
+<h3>Metrics</h3>
+<ul>
+<li>Variation of Information (VOI)</li>
+<li>Undersegmentation Error (UE)</li>
+<li>Boundary Recall (BR)</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Variation of Information (VOI)</h3>
+Given two different clusterings $X=\{X_1, X_2, \ldots, X_k\}$ and $Y=\{Y_1, Y_2, \ldots, Y_l\}$<br>
+$$VOI(X; Y) = -\sum_{i, j}r_{ij}\cdot\left[log\left(\frac{r_{ij}}{p_i}\right) + log\left(\frac{r_{ij}}{q_j}\right)\right]$$
+$p_i = \frac{\mid X_i\mid}{N}$, $q_i = \frac{\mid Y_i\mid}{N}$, $r_{ij} = \frac{\mid X_i\mid \cap \mid Y_j\mid}{N} $
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Undersegmentation Error</h3>
+$$UE = \frac{1}{\mid GT\mid}\sum_{S\in GT}\left(\frac{\sum_{P:P\cap S\neq 0}min\left(\mid P_{in}\mid, \mid P_{out}\mid\right)}{\mid S\mid}\right)$$
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Boundary Recall</h3>
+$$BR = \frac{TP}{TP + FN}$$
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/voi.png"; width=auto; height=300px>
+<img data-src="chapters/superpixels/imgs/ue.png"; width=auto; height=300px>
+<img data-src="chapters/superpixels/imgs/br.png"; width=auto; height=300px>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>UE vs. VOI</h3>
+<img data-src="chapters/superpixels/imgs/voi_vs_ue.png"; width=auto; height=300px>
+<img data-src="chapters/superpixels/imgs/voi_vs_ue2.png"; width=auto; height=200px>
+<aside class="notes">
+Similar UE, lower VOI for BASS
+</aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/results1.png">
+</section>
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/results2.png">
+</section>
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/results3.png">
+</section>
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<img data-src="chapters/superpixels/imgs/results4.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h2>Summary</h2>
+<ul>
+<li>Over-segmentation algorithm to compute superpixels aware of the boundary information</li>
+<li>Formulated as an iterative clustering problem using color, Euclidean and geodesic distance</li>
+<li>Evaluated against 3 SoA methods in 7 datasets</li>
+<li>Our algorithm outperforms SoA methods in the most significant metric according to our goal</li>
+<li>Implemented in C++, runs on CPU in ~0.5 secs/img</li>
+<li>Code publicly available</li>
+</ul>
+</section>

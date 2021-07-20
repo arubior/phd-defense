@@ -8,7 +8,8 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<!-- link rel="stylesheet" href="dist/theme/league.css"> -->
+		<link rel="stylesheet" href="dist/theme/custom.css">
 
 		<!-- Drawing plugin (activate with T)-->
 		<link rel="stylesheet" href="plugin/drawer/drawer.css" />
@@ -19,34 +20,16 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h1>Fashion Discovery: A Computer Vision Approach</h1>
+				<section data-background-image="imgs/backgrounds/title-01.png">
 				</section>
 
-				<!-- Testing revealjs-animated plugin (not working in github) -->
-				<section>
-					<p class="fragment animated move-to" data-animated-move-to-left="-50%" data-animated-move-to-top="300px" data-animated-duration="3000">One Item</p>
-				</section>
-
-				<section><h1>Contents</h1>
-					<ol>
-					<li>Introduction</li>
-					<li>Overview</li>
-					<li>Superpixel Segmentation</li>
-					<li>Fashion Multi-modal Embedding</li>
-					<li>Main Product Detection</li>
-					<li>Contributions to Wide Eyes</li>
-					<li>Conclusions</li>
-					</ol>
-				</section>
-
-				<section data-external="chapters/intro.html"> </section>
-				<section data-external="chapters/soa.html"> </section>
-				<section data-external="chapters/superpixels.html"> </section>
-				<section data-external="chapters/embedding.html"> </section>
-				<section data-external="chapters/mainproduct.html"> </section>
-				<section data-external="chapters/we.html"> </section>
-				<section data-external="chapters/conclusions.html"> </section>
+				<section data-external="chapters/intro/intro.html"> </section>
+				<!-- section data-external="chapters/soa/soa.html"> </section -->
+				<section data-external="chapters/superpixels/superpixels.html"> </section>
+				<section data-external="chapters/embedding/embedding.html"> </section>
+				<section data-external="chapters/mainproduct/mainproduct.html"> </section>
+				<section data-external="chapters/we/we.html"> </section>
+				<section data-external="chapters/conclusions/conclusions.html"> </section>
 			</div>
 		</div>
 
@@ -54,6 +37,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<!-- Drawing plugin (activate with T)-->
 		<script src="plugin/drawer/drawer.js"></script>
 		<script>
@@ -63,12 +47,16 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: true,
+				progress: true,
+				transition: 'convex',
+				backgroundTransition: 'fade',
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer ],
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer, RevealMath ],
 
 				dependencies: [{src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true},
-				{src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external],[data-external-replace]' )}}],
+					       {src: 'plugin/math/math.js', async: true},
+					       {src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external],[data-external-replace]' )}}],
 			});
 
 		</script>

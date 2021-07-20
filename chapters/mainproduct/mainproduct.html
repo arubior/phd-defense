@@ -1,0 +1,167 @@
+<section id="mainproduct"
+	 data-background-video="videos/chapter-red.mp4"
+         data-background-video-loop data-background-video-muted>
+	<h1><p class="fragment fade-in">MAIN PRODUCT DETECTION</p></h1>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<img data-src="chapters/mainproduct/imgs/teaser4.gif"; height=600px>
+</section>
+
+<section data-background-iframe="https://www.oliveclothing.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
+          data-background-interactive>
+</section>
+
+<section data-background-iframe="https://bohemiantraders.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
+          data-background-interactive>
+</section>
+
+<section data-background-iframe="https://cutterbuck.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
+          data-background-interactive>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Introduction</h2>
+Most of current commercial transactions occur online (numbers).<br>
+Products are presented online tastefully combined and with metadata.<br>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Contributions</h2>
+<ul>
+<li>System to detect the most relevant product in a fashion image given the metadata. This allows to train specific product classifiers, or used as a first step in tasks like VQA.</li>
+<li>Evaluation of the method performance in a different e-commerce</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Related Work</h2>
+<ul>
+<li><strike>Multi-modal embeddings for img + text (previous chapter)</strike></li>
+<li>Object detection</li>
+<li>Phrase localization</li>
+<li>Mention here GPT-3 or dall-e</li>
+</ul>
+<img data-src="chapters/mainproduct/imgs/cat.png"; width=auto; height=100px>
+<img data-src="chapters/mainproduct/imgs/MIE.png"; width=auto; height=100px>
+<img data-src="chapters/mainproduct/imgs/moto.png"; width=auto; height=100px>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         data-transition="convex-in none-out">
+<h2>Method</h2>
+<img data-src="chapters/mainproduct/imgs/network/network1.png">
+</section>
+<section data-background-image="imgs/backgrounds/red-01.png"
+         data-transition="none">
+<h2>Method</h2>
+<img data-src="chapters/mainproduct/imgs/network/network2.png">
+</section>
+<section data-background-image="imgs/backgrounds/red-01.png"
+         data-transition="none">
+<h2>Method</h2>
+<img data-src="chapters/mainproduct/imgs/network/network3.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Method</h2>
+Goal: detect the main product, considering the case where the image contains several other garments and has additional metadata associated.
+Different approaches:<br>
+<ol>
+<li>Full image</li>
+<li>Bboxes</li>
+<li>RoI pooling</li>
+</ol>
+<br>Overlap loss
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Method</h2>
+<ul>
+<li>Common parts:
+<ul>
+<li>Contrastive loss (formula)</li>
+<li>Classification loss (formula)</li>
+<li>Global loss (formula)</li>
+<li>Text network</li>
+</ul>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>RoI pooling</h2>
+explain RoI pooling (fig 5.6)
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Method</h2>
+<img data-src="chapters/mainproduct/imgs/original.png"; width=auto; height=300px>
+<img data-src="chapters/mainproduct/imgs/deformed.png"; width=auto; height=300px>
+<img data-src="chapters/mainproduct/imgs/regular.png"; width=auto; height=300px>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Dataset</h2>
+Images and metadata of products from fashion e-commerce sites.
+<ul>
+<li><b>Train:</b> 458,700 products from 8 different e-commerces</li>
+<li><b>Test:</b> 3,000 products from a different e-commerce with the GT bounding box</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Results</h2>
+<ul>
+<li>Qualitative (image)</li>
+<li>Quantitative (table 5.1)</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<style type="text/css">
+.container {
+  border: 0px solid blue;
+  padding: 100px 0px 0px;
+  max-width: 1920px;
+  display: flex;
+  &__image {
+    margin: 0px 0px 0 0;
+    width: 1000px;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+  &__text {
+    flex: 1 1 auto;
+  }
+}
+</style>
+<div class="container">
+  <!-- img class="container__image" src="https://mtdata.ru/u7/photo53A0/20946911428-0/original.jpg#20946911428"-->
+  <video data-autoplay loop src="chapters/mainproduct/videos/mainprod-square.mp4"; height=400px></video>
+  <div class="container__text">
+<p class="fragment">1. Extract features for the proposals</p>
+<p class="fragment">2. Extract features for the text</p>
+<p class="fragment">3. Compute distance</p>
+<p class="fragment">4. Check overlap with the GT</p>
+  </div>
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Results</h2>
+<img data-src="chapters/mainproduct/imgs/tsne.png"; width=auto; height=300px>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Summary</h2>
+Method that uses textual metadata to detect the product of interest in fashion e-commerce images.<br>
+Text parameterized using a distributed representation<br>
+Compact representations of bboxes from frozen layers of a pre-trained network.<br>
+Comparison of several architectures, different loss type combinations.<br>
+80% of the cases ranked in top-3<br>
+Clothing category classification<br>
+Relevance for Wide Eyes -> other publication.<br>
+<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+"Your text here."
+</blockquote>
+</section>
