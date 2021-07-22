@@ -81,6 +81,16 @@ While they focus on many-to-many correspondences, i.e. relating parts of sentenc
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Network inputs</h3>
+</div>
+  <div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="chapters/mainproduct/imgs/inputs/network_inputs-01.png">
+  <img class="fragment current-visible" data-fragment-index="0" src="chapters/mainproduct/imgs/inputs/network_inputs-02.png">
+  <img class="fragment current-visible" data-fragment-index="1" src="chapters/mainproduct/imgs/inputs/network_inputs-03.png">
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
 <h3>Network architecture</h3>
 <div class="r-stack">
   <p class="fragment current-visible" data-fragment-index="0" >Text branch, convolutional backbone and losses are common</p>
@@ -97,39 +107,46 @@ While they focus on many-to-many correspondences, i.e. relating parts of sentenc
 </div>
 </section>
 
-
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
+<section data-background-image="imgs/backgrounds/red-01.png">
 <h3>Overlap loss</h3>
-<img data-src="chapters/mainproduct/imgs/loss/loss1.png">
-</section>
-<section data-background-image="imgs/backgrounds/red-01.png"
-         id="overlaploss">
-<h3>Overlap loss</h3>
-<a data-preview-link href="#/globalloss">
-<img data-src="chapters/mainproduct/imgs/loss/loss2.png"></a>
-</section>
-<section data-background-image="imgs/backgrounds/red-01.png"
->
-<h3>Overlap loss</h3>
-<img data-src="chapters/mainproduct/imgs/loss/loss3.png">
-</section>
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
-<h3>Overlap loss</h3>
-<img data-src="chapters/mainproduct/imgs/loss/loss4.png">
-<aside class="notes">
-Overlap loss is just L1 regression of GT and predicted overlap, computed as IoU
-</aside>
+We also add an L1 regression <b>overlap loss</b> to predict the overlap between each bounding box and the ground truth
+</div>
+  <div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="chapters/mainproduct/imgs/overlaps/overlaps-01.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="0" src="chapters/mainproduct/imgs/overlaps/overlaps-02.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="1" src="chapters/mainproduct/imgs/overlaps/overlaps-03.png"; height="500">
+</div>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <h3>RoI pooling</h3>
-<img data-src="chapters/mainproduct/imgs/roi.png">
+<div class="r-stretch">
+<div class="r-stack">
+  <p class="fragment fade-out" data-fragment-index="0">How to obtain the output descriptors for different boxes?</p>
+  <p class="fragment current-visible" data-fragment-index="0" >A classical approach would do one forward pass per box</p>
+  <p class="fragment current-visible" data-fragment-index="3" >Can we obtain multiple descriptors only with one forward pass?</p>
+  <p class="fragment current-visible" data-fragment-index="4" >Using regions of interest (RoIs) it is possible</p>
+  <p class="fragment current-visible" data-fragment-index="6" >RoI pooling produces same-size features for all RoIs</p>
+</div>
+  <div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="chapters/mainproduct/imgs/roi/roi-01.png"; width=100%>
+  <img class="fragment current-visible" data-fragment-index="0" src="chapters/mainproduct/imgs/roi/roi-02.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="1" src="chapters/mainproduct/imgs/roi/roi-03.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="2" src="chapters/mainproduct/imgs/roi/roi-04.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="3" src="chapters/mainproduct/imgs/roi/roi-05.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="4" src="chapters/mainproduct/imgs/roi/roi-06.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="5" src="chapters/mainproduct/imgs/roi/roi-07.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="6" src="chapters/mainproduct/imgs/roi/roi-08.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="7" src="chapters/mainproduct/imgs/roi/roi-09.png"; width=100%%>
+  <img class="fragment current-visible" data-fragment-index="8" src="chapters/mainproduct/imgs/roi/roi-10.png"; width=100%%>
+<span class="fragment current-visible">
 <ul>
 <li>10x faster training / 20x faster testing</li>
-<li>Input to our network: 6x6x256 regions</li>
+<li>Input to our network in case C: 6x6x256 regions</li>
 </ul>
+</span>
+</div>
+</div>
 <aside class="notes">
 we can use the same feature map for all the proposals which enables us to pass the entire image to the CNN instead of passing all proposals individually.
 </aside>
@@ -148,56 +165,12 @@ Images and metadata of products from fashion e-commerce sites.
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/red-01.png">
-<h3>Categories</h3>
-<small>
-<table>
-<tbody>
-<tr>
-<td>vest</td>
-<td>skirt</td>
-</tr>
-<tr>
-<td>swimwear</td>
-<td>suits</td>
-</tr>
-<tr>
-<td>shorts</td>
-<td>jumpsuits</td>
-</tr>
-<tr>
-<td>shoes</td>
-<td>pants</td>
-</tr>
-<tr>
-<td>tops</td>
-<td>hats</td>
-</tr>
-<tr>
-<td>accessories</td>
-<td>belts</td>
-</tr>
-<tr>
-<td>glasses/sunglasses</td>
-<td>backpack</td>
-</tr>
-<tr>
-<td>bags</td>
-<td>outerwear</td>
-</tr>
-<tr>
-<td>dress</td>
-<td>sweatshirt/sweaters</td>
-</tr>
-<tr>
-<td>background</td>
-</tr>
-</tbody>
-</table>
-</small>
-<aside class="notes">
-19 categories
-</aside>
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Dataset categories</h3>
+<p><b>19 garment categories:</b> <em>accessories</em>, <em>pants</em>, <em>tops</em>, <em>bags</em>, ...</p>
+<img data-src="chapters/mainproduct/imgs/categories/categories-04.png"; width=auto; height=310px>
+<img data-src="chapters/mainproduct/imgs/categories/categories-05.png"; width=auto; height=310px>
+<img data-src="chapters/mainproduct/imgs/categories/categories-06.png"; width=auto; height=310px>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
@@ -237,8 +210,7 @@ Images and metadata of products from fashion e-commerce sites.
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
+<section data-background-image="imgs/backgrounds/red-01.png">
 <h3>Qualitative results</h3>
 <div class="container">
   <img class="container__image" src="chapters/mainproduct/imgs/results/tshirt.png"; height="400px">
@@ -257,49 +229,7 @@ neutral basic. Ultra comfortable 100% cotton weave. Sewn rolled sleeves. The mod
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
-<h3>Qualitative results</h3>
-<div class="container">
-  <img class="container__image" src="chapters/mainproduct/imgs/results/shirt.png"; height="400px">
-  <div class="container__text">
-  <small>
-<ul style="list-style-type:none;">
-<br>
-<li> <b>Category:</b> Shirts & Blouses.</li>
-<li><b>Description:</b> Men Color: Casual shirts. Le 31 - All-over check shirt. Regular fit Le 31. Exclusively from Le 31 for men.
- Trendy all-over checks redesigned in a palette perfect for the upcoming season. Regular fit Button-down collar. Contrasting underside. Ultra comfortable
- 100% cotton poplin. The model is wearing size medium.</li>
-<li><b>Title:</b> Le 31 - All-over check shirt Regular fit (Men, Red, XX- LARGE).</li>
-<li><b>Color:</b> Khaki.</li>
-</ul>
-  </small>
-  </div>
-</div>
-</section>
-
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
-<h3>Qualitative results</h3>
-<div class="container">
-  <img class="container__image" src="chapters/mainproduct/imgs/results/tshirt2.png"; height="400px">
-  <div class="container__text">
-  <small>
-<ul style="list-style-type:none;">
-<br>
-<li> <b>Category:</b> T-Shirts.</li>
-<li><b>Description:</b> Women >T-Shirts. Twik - Solid high-neck tank Twik. Exclusively from Twik. A fitted
-high-neck piece perfect for casual looks. Comfortable, stretch jersey. The model is wearing size small.</li>
-<li><b>Title:</b> Twik - Solid high-neck tank (Women, Red, X- SMALL).</li>
-<li><b>Color:</b> Ruby Red.</li>
-</ul>
-  </small>
-  </div>
-</div>
-</section>
-
-<section data-background-image="imgs/backgrounds/red-01.png"
-         >
+<section data-background-image="imgs/backgrounds/red-01.png">
 <h3>Qualitative results</h3>
 <div class="container">
   <img class="container__image" src="chapters/mainproduct/imgs/results/coat.png"; height="400px">
