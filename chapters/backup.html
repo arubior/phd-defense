@@ -1,11 +1,21 @@
-<section data-background-image="imgs/backgrounds/colors-intro.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
+<h3>Classification</h3>
+  <img class="r-stretch" src="chapters/embedding/imgs/confusion1.png">
+</section>
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
+
+<h3>Classification</h3>
+  <img class="r-stretch" src="chapters/embedding/imgs/confusion2.png">
+</section>
+
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/colors-intro.png">
 <h3>Applications</h3>
 <p class="fragment fade-right">Annotations (superpixels)</p>
 <p class="fragment fade-left">Multi-modal retrieval system</p>
 <p class="fragment fade-up">Main product detection</p>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Algorithm</h3>
 <pre><code data-line-numbers="1|2|3|4-5|6|7|8|9-12|16|18">Set K, it_max and area_min
 Compute edges of the input image
@@ -28,7 +38,7 @@ Merge small superpixels with bigger adjacent ones
 </code></pre>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Seeds initialization</h3>
 <font size="6">
 <ul ul style="list-style-type:none;">
@@ -48,7 +58,7 @@ Merge small superpixels with bigger adjacent ones
 </font>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 \begin{equation}
 E_{lab} = \sqrt{(l_k - l_i)^2 + (a_k - a_i)^2 + (b_k - b_i)^2}
 \end{equation}
@@ -57,24 +67,24 @@ E_{xy} = \sqrt{(x_k - x_i)^2 + (y_k - y_i)^2}
 \end{equation}
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Variation of Information (VOI)</h3>
 Given two different clusterings $X=\{X_1, X_2, \ldots, X_k\}$ and $Y=\{Y_1, Y_2, \ldots, Y_l\}$<br>
 $$VOI(X; Y) = -\sum_{i, j}r_{ij}\cdot\left[log\left(\frac{r_{ij}}{p_i}\right) + log\left(\frac{r_{ij}}{q_j}\right)\right]$$
 $p_i = \frac{\mid X_i\mid}{N}$, $q_i = \frac{\mid Y_i\mid}{N}$, $r_{ij} = \frac{\mid X_i\mid \cap \mid Y_j\mid}{N} $
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Undersegmentation Error</h3>
 $$UE = \frac{1}{\mid GT\mid}\sum_{S\in GT}\left(\frac{\sum_{P:P\cap S\neq 0}min\left(\mid P_{in}\mid, \mid P_{out}\mid\right)}{\mid S\mid}\right)$$
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Boundary Recall</h3>
 $$BR = \frac{TP}{TP + FN}$$
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>Seeds initialization</h3>
 <img data-src="chapters/superpixels/imgs/seeds/cartel2.png"; width=auto; height=200px>
 <img data-src="chapters/superpixels/imgs/seeds/img1.png"; width=auto; height=200px>
@@ -82,7 +92,7 @@ $$BR = \frac{TP}{TP + FN}$$
 <img data-src="chapters/superpixels/imgs/seeds/perrete.png"; width=auto; height=200px>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <h3>UE vs. VOI</h3>
 <img data-src="chapters/superpixels/imgs/voi_vs_ue.png"; width=auto; height=300px>
 <img data-src="chapters/superpixels/imgs/voi_vs_ue2.png"; width=auto; height=200px>
@@ -91,14 +101,14 @@ Similar UE, lower VOI for BASS
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <img data-src="chapters/superpixels/imgs/results3.png">
 </section>
-<section data-background-image="imgs/backgrounds/gray.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/gray.png">
 <img data-src="chapters/superpixels/imgs/results4.png">
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>word2vec</h3>
 Text preprocessing
 <div class="r-stack">
@@ -111,25 +121,25 @@ Text preprocessing
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>word2vec</h3>
 Example of a context window of 2 words
 <img data-src="chapters/embedding/imgs/context.gif">
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png">
 <h2>Method</h2>
 <img data-src="chapters/mainproduct/imgs/original.png"; width=auto; height=300px>
 <img data-src="chapters/mainproduct/imgs/deformed.png"; width=auto; height=300px>
 <img data-src="chapters/mainproduct/imgs/regular.png"; width=auto; height=300px>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>word2vec</h3>
 <img data-src="chapters/embedding/imgs/word_vectors.png">
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>Contrastive loss</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/contrastive0.png"; height="500">
@@ -141,7 +151,7 @@ Example of a context window of 2 words
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>Global loss</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/losses1.png"; height="500">
@@ -150,7 +160,7 @@ Example of a context window of 2 words
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h3>Dataset categories</h3>
 <small>
 <table>
@@ -211,14 +221,14 @@ Example of a context window of 2 words
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <ul>
 <li><b>1st approach: Bag of Words:</b> based on frequency, ignoring grammar or context. Also, vectors have 4k/8k dimensions depending on the training set.</li>
 <li><b>2nd approach: word2vec:</b> shallow neural networks trained to reconstruct context. Vectors are distributed representations with a fixed dimension, independently on the training set.</li>
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/blue.png">
 <h2>Classification results</h2>
 <table class="tg">
 <thead>
@@ -246,7 +256,7 @@ Example of a context window of 2 words
 </table>
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png">
 <h3>Quantitative results</h3>
 <small>
 <table class="tg">
@@ -287,7 +297,7 @@ Example of a context window of 2 words
 </section>
 
 
-<section data-background-image="imgs/backgrounds/black.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/black.png">
 <h3>Superpixel segmentation</h3>
 <ul>
 <li>Too many superpixels had to be annotated to select a meaningful region</li>
@@ -297,7 +307,7 @@ Example of a context window of 2 words
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/black.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/black.png">
 <h3>Superpixel segmentation: present and future work</h3>
 <ul>
 <li>Since 2015, superpixel segmentation has been tackled using deep learning techniques</li>
@@ -309,7 +319,7 @@ Advantage: GPUs, try different optimizers, use data augmentation to regularize, 
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/black.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/black.png">
 <h3>Multi-modal embedding</h3>
 <ul>
 <li>Creation of a multi-modal embedding capable of encapsulating images and texts</li>
@@ -321,7 +331,7 @@ The dataset is challenging due to big size and extremely similar products
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/black.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/black.png">
 <h3>Main product detection</h3>
 <ul>
 <li>Took advantage of the RoI pooling layer</li>
@@ -329,7 +339,7 @@ The dataset is challenging due to big size and extremely similar products
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png">
 <h3>Network architecture</h3>
 <style type="text/css">
 #block1
@@ -374,7 +384,7 @@ The dataset is challenging due to big size and extremely similar products
 </div>
   </section>
 
-<section data-background-image="imgs/backgrounds/red.png" >
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png" >
 <h3>Overlap loss</h3>
 </div>
   <div class="r-stack">
@@ -388,7 +398,7 @@ Overlap loss is just L1 regression of GT and predicted overlap, computed as IoU
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png">
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png">
 <h3>Categories</h3>
 <small>
 <table>
@@ -440,7 +450,7 @@ Overlap loss is just L1 regression of GT and predicted overlap, computed as IoU
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png"
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png"
          >
 <h3>Qualitative results</h3>
 <div class="container">
@@ -461,7 +471,7 @@ Overlap loss is just L1 regression of GT and predicted overlap, computed as IoU
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/red.png"
+<section data-visibility="uncounted" data-background-image="imgs/backgrounds/red.png"
          >
 <h3>Qualitative results</h3>
 <div class="container">
@@ -481,6 +491,6 @@ high-neck piece perfect for casual looks. Comfortable, stretch jersey. The model
 </div>
 </section>
 
-<section data-background-iframe="https://openai.com/blog/dall-e/"
+<section data-visibility="uncounted" data-background-iframe="https://openai.com/blog/dall-e/"
           data-background-interactive>
 </section>
