@@ -4,11 +4,11 @@
 	<h1><p class="fragment fade-in"; style="color:white;">FASHION MULTI-MODAL EMBEDDING</p></h1>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Introduction</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-intro.png">
 <h3>Motivation</h3>
 <div class="container">
   <video data-autoplay loop src="chapters/embedding/videos/instagram.mp4"; height=400px></video>
@@ -30,7 +30,7 @@ Specific system needed to narrow the gap between img and text descriptors<br>
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-intro.png">
 <h3>Motivation</h3>
 <ul>
 <li>Multi-modal data: <span class="fragment highlight-current-blue"><b>images</b></span> with <span class="fragment highlight-current-blue"><b>textual metadata</b></span>.
@@ -42,8 +42,8 @@ Specific system needed to narrow the gap between img and text descriptors<br>
           data-background-interactive>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
-<h3>Goals</h3>
+<section data-background-image="imgs/backgrounds/blue-intro.png">
+<h3>Goal</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/embedding/embedding1.png">
   <img class="fragment current-visible" data-fragment-index="0" src="chapters/embedding/imgs/embedding/embedding2.png">
@@ -55,7 +55,7 @@ Specific system needed to narrow the gap between img and text descriptors<br>
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-intro.png">
 <h3>Contributions</h3>
 <ul>
 <!-- li>NN architecture for processing images and text trained such that dist between the output of related img-text is minimized and unrelated maximized</li-->
@@ -75,7 +75,7 @@ smooth features: small changes in input -> small changes in embedding
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-intro.png">
 <h3>Context</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/soa/soa1.png">
@@ -88,11 +88,11 @@ smooth features: small changes in input -> small changes in embedding
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Related work</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-related.png">
 <h3>Multi-modal embeddings</h3>
 <img data-src="chapters/embedding/imgs/soa/emb2-01.png"; height="175px">
 <img data-src="chapters/embedding/imgs/soa/emb1-01.png"; height="175px">
@@ -103,7 +103,7 @@ smooth features: small changes in input -> small changes in embedding
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-related.png">
 <h3>Retrieval</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/cbir1.png">
@@ -115,11 +115,11 @@ Still, bridging the so-called "semantic gap" between low-level pixel features re
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Method</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>Network architecture</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/network/network1.png">
@@ -132,7 +132,7 @@ Still, bridging the so-called "semantic gap" between low-level pixel features re
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>Network architecture</h3>
 <ul>
 <li><b>Image branch</b></li>
@@ -149,12 +149,12 @@ Still, bridging the so-called "semantic gap" between low-level pixel features re
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>word2vec</h3>
 <img data-src="chapters/embedding/imgs/word2vec_scheme1.png"; height="600">
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>Text preprocessing</h3>
 Removing unwanted symbols, stop words and inflections.
   <div class="r-stack">
@@ -163,7 +163,7 @@ Removing unwanted symbols, stop words and inflections.
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>word2vec result example</h3>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -213,7 +213,7 @@ Removing unwanted symbols, stop words and inflections.
 </table>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>Contrastive loss</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/pairs/pairs1.png"; height="500">
@@ -228,16 +228,16 @@ Removing unwanted symbols, stop words and inflections.
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-method.png">
 <h3>Contrastive loss</h3>
 <video data-autoplay src="chapters/embedding/videos/contrastive.mp4"></video>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Dataset</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-dataset.png">
 <ul>
 <li><span class="fragment highlight-current-blue"><em>431,841 images</em></span>
 of products with
@@ -254,7 +254,7 @@ of products with
 <img data-src="chapters/embedding/imgs/pants.png"; height="250px">
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-dataset.png">
 <h3>Dataset categories</h3>
 <p><b>32 garment categories:</b> <em>shirt</em>, <em>hat</em>, <em>polo</em>, <em>skirt</em>, <em>jewelry</em>, ...</p>
 <img data-src="chapters/embedding/imgs/categories/categories-01.png"; width=auto; height=310px>
@@ -262,11 +262,11 @@ of products with
 <img data-src="chapters/embedding/imgs/categories/categories-03.png"; width=auto; height=310px>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Results</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-results.png">
 <h4>Query</h4>
 <small>
 <span class="fragment highlight-current-blue" data-fragment-index="0">Solid color</span>,
@@ -285,7 +285,7 @@ of products with
 </section>
 
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-results.png">
 <h2>Retrieval results</h2>
 <aside class="notes">
 1st approach: Bag of Words: based on frequency, ignoring grammar or context. Also, vectors have 4k/8k dimensions depending on the training set.<br>
@@ -337,7 +337,7 @@ word2vec: shallow neural networks trained to reconstruct context. Vectors are di
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue-results.png">
 <h2>Retrieval results</h2>
 <table class="tg">
 <thead>
@@ -379,7 +379,7 @@ word2vec: shallow neural networks trained to reconstruct context. Vectors are di
 </table>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
+<section data-background-image="imgs/backgrounds/blue.png">
 <h2>Summary</h2>
 <ul>
 <li>Presented retrieval results on a <span class="fragment highlight-current-blue">challenging real-world dataset</span>, obtaining low median rank values</li>

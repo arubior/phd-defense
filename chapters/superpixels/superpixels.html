@@ -4,12 +4,12 @@
 	<h1><p class="fragment fade-in"; style="color:white;">SUPERPIXEL SEGMENTATION</p></h1>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
           <!--data-background-size="100px" data-background-repeat="repeat"-->
 <h2>INTRODUCTION</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-intro.png">
   <div class="r-stack">
   <p class="fragment current-visible" data-fragment-index="2" >Even small images contain lots of pixels</p>
   <p class="fragment current-visible" data-fragment-index="5" >We can cluster the data without losing information</p>
@@ -25,7 +25,7 @@
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-intro.png">
 <h3>Superpixels</h3>
 <ul>
 <li>Perceptually meaningful clusters for pixels</li>
@@ -38,7 +38,7 @@ Reduce cost for subsequent tasks (like annotations, talk about other examples)<b
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-intro.png">
 <h3>Problems</h3>
 <em><b>Oversegmentation</b></em> vs. <em><b>undersegmentation</b></em>
 <div class="r-stack">
@@ -55,7 +55,7 @@ Our goal: reduce the number of SPs without losing information by having bigger s
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-intro.png">
 <h3>Boundary-Aware Superpixel Segmentation (BASS)</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/superpixels/imgs/first/first1.png">
@@ -64,7 +64,7 @@ Our goal: reduce the number of SPs without losing information by having bigger s
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-intro.png">
 	<h3>CONTRIBUTIONS</h3>
 	<ul>
 	<li>New boundary-aware initialization method for superpixel centers</li>
@@ -74,11 +74,11 @@ Our goal: reduce the number of SPs without losing information by having bigger s
 	</ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
 	<h2>RELATED WORK</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-related.png">
 	<h3>Graph-based</h3>
 	<img class="r-stretch" src="chapters/superpixels/imgs/graph.png">
 <ul>
@@ -93,7 +93,7 @@ Our goal: reduce the number of SPs without losing information by having bigger s
 	</aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-related.png">
 	<h3>Coarse-to-fine methods</h3>
 	<img data-src="chapters/superpixels/imgs/coarse.png">
 <ul>
@@ -105,7 +105,7 @@ focused on producing regular superpixels with similar sizes<br>
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-related.png">
 	<h3>Seed-growing</h3>
 	<img class="r-stretch" src="chapters/superpixels/imgs/seeds_spx.png"; height=300px>
 <ul>
@@ -119,11 +119,11 @@ more efficient than graph-based, but not always better performance<br>
 </aside>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
 <h2>METHOD</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Overview</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/superpixels/imgs/scheme/scheme1.png">
@@ -139,14 +139,14 @@ more efficient than graph-based, but not always better performance<br>
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Boundary detection</h3>
 <img data-src="chapters/superpixels/imgs/boundaries_a.png"; width=auto; height=300px>
 <img data-src="chapters/superpixels/imgs/boundaries_b.png"; width=auto; height=300px>
 <p>Edge detection result binarized to use top 70% most intense boundaries</p>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Seeds initialization</h3>
 <div class="container">
   <video data-autoplay loop src="chapters/superpixels/videos/seeds-square.mp4"; height=450px></video>
@@ -162,14 +162,14 @@ more efficient than graph-based, but not always better performance<br>
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Seeds initialization</h3>
 <img data-src="chapters/superpixels/imgs/seeds/cafe.png"; width=auto; height="300">
 <img data-src="chapters/superpixels/imgs/seeds/cartel.png"; width=auto; height="300">
 <img data-src="chapters/superpixels/imgs/seeds/img2.png"; width=auto; height="300">
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 A seed is just a 5-dimensional vector with average values of all the pixels belonging to superpixel $k$
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/superpixels/imgs/seedeq/seedeq1.png">
@@ -179,7 +179,7 @@ A seed is just a 5-dimensional vector with average values of all the pixels belo
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Energy function</h3>
   <div class="r-stack">
   <img class="fragment fade-out" data-fragment-index="0" src="chapters/superpixels/imgs/energy/energyeq1.png">
@@ -189,7 +189,7 @@ A seed is just a 5-dimensional vector with average values of all the pixels belo
 </div>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Energy functions</h3>
 \begin{equation}
 E_{lab} = dist\left((l_k, a_k, b_k), (l_i, a_i, b_i)\right)
@@ -199,7 +199,7 @@ E_{xy} = dist\left((x_k, y_k), (x_i, y_i)\right)
 \end{equation}
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Energy functions</h3>
 $E_{geo}$: Distance Transform on Curved Spaces
 <img data-src="chapters/superpixels/imgs/geo1.png"; width=600px; height=auto>
@@ -207,7 +207,7 @@ $E_{geo}$: Distance Transform on Curved Spaces
 </section>
 
 <section id="compactness"
-	 data-background-image="imgs/backgrounds/gray-01.png">
+	 data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Compactness term</h3>
 <img data-src="chapters/superpixels/imgs/compactness/energy.png"><br>
 <img data-src="chapters/superpixels/imgs/compactness/dress.png"; width=auto; height=210px>
@@ -220,7 +220,7 @@ $E_{geo}$: Distance Transform on Curved Spaces
 <img data-src="chapters/superpixels/imgs/compactness/100.png"; width=auto; height=210px>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-method.png">
 <h3>Energy functions</h3>
 <img data-src="chapters/superpixels/imgs/energy/original2.png"; width=auto; height=380px>
 <img data-src="chapters/superpixels/imgs/energy/energy_lab2.png"; width=auto; height=380px>
@@ -228,11 +228,11 @@ $E_{geo}$: Distance Transform on Curved Spaces
 <img data-src="chapters/superpixels/imgs/energy/energy_geo2.png"; width=auto; height=380px>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
 <h2>Datasets</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-dataset.png">
 <ul>
 <li>Fashionista (Yamaguchi et al., CVPR 2012)</li>
 <li>BSD (Martin et al., ICCV 2001)</li>
@@ -244,7 +244,7 @@ $E_{geo}$: Distance Transform on Curved Spaces
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-dataset.png">
 <img data-src="chapters/superpixels/imgs/datasets/1.jpg"; width=auto; height=130px>
 <img data-src="chapters/superpixels/imgs/datasets/2.jpg"; width=auto; height=130px>
 <img data-src="chapters/superpixels/imgs/datasets/3.jpg"; width=auto; height=130px>
@@ -266,12 +266,12 @@ $E_{geo}$: Distance Transform on Curved Spaces
 <img data-src="chapters/superpixels/imgs/datasets/20.jpg"; width=auto; height=130px>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
 <h2>Results</h2>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
-<h3>Methods</h3>
+<section data-background-image="imgs/backgrounds/gray-results.png">
+<h3>Compared methods</h3>
 <ul>
 <li>Boundary-Aware Superpixel Segmentation (BASS)</li>
 <li>SEEDS (Van den Bergh, IJCV 2015)</li>
@@ -280,7 +280,7 @@ $E_{geo}$: Distance Transform on Curved Spaces
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-results.png">
 <h3>Metrics</h3>
 <ul>
 <li>Variation of Information (VOI)</li>
@@ -295,7 +295,7 @@ $E_{geo}$: Distance Transform on Curved Spaces
 </ul>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-results.png">
 <ul>
 <li>Significant improvement in VOI, the most relevant metric for our goal</li>
 <li>UE and BR values in pair with the SoA</li>
@@ -305,14 +305,14 @@ $E_{geo}$: Distance Transform on Curved Spaces
 <img data-src="chapters/superpixels/imgs/formulas-03.png"; width=auto; height=320px>
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-results.png">
 <img data-src="chapters/superpixels/imgs/results1.png">
 </section>
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray-results.png">
 <img data-src="chapters/superpixels/imgs/results2.png">
 </section>
 
-<section data-background-image="imgs/backgrounds/gray-01.png">
+<section data-background-image="imgs/backgrounds/gray.png">
 <h2>Summary</h2>
 <ul>
 <li>Over-segmentation algorithm to compute superpixels aware of the boundary information</li>
