@@ -122,6 +122,123 @@ Example of a context window of 2 words
 <img data-src="chapters/embedding/imgs/word_vectors.png">
 </section>
 
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Contrastive loss</h3>
+  <div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/contrastive0.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/contrastive1.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="1" src="chapters/embedding/imgs/contrastive/contrastive2.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="2" src="chapters/embedding/imgs/contrastive/contrastive3.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="3" src="chapters/embedding/imgs/contrastive/contrastive4.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="4" src="chapters/embedding/imgs/contrastive/contrastive5.png"; height="500">
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Global loss</h3>
+  <div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/losses1.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="0" src="chapters/embedding/imgs/contrastive/losses2.png"; height="500">
+  <img class="fragment current-visible" data-fragment-index="1" src="chapters/embedding/imgs/contrastive/losses3.png"; height="500">
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Dataset categories</h3>
+<small>
+<table>
+<tbody>
+<tr>
+<td>vest</td>
+<td>hat</td>
+<td>boots</td>
+<td>polo</td>
+</tr>
+<tr>
+<td>jewelry</td>
+<td>skirt</td>
+<td>clutch/wallet</td>
+<td>cardigan</td>
+</tr>
+<tr>
+<td>shirt</td>
+<td>dress</td>
+<td>backpack</td>
+<td>swimwear</td>
+</tr>
+<tr>
+<td>suits</td>
+<td>travel bags</td>
+<td>glasses/sunglasses</td>
+<td>pants/leggings</td>
+</tr>
+<tr>
+<td>flats</td>
+<td>shorts</td>
+<td>coat/cape</td>
+<td>tops</td>
+</tr>
+<tr>
+<td>pump/wedge</td>
+<td>sweatshirt/hoodie</td>
+<td>blazer</td>
+<td>top handles</td>
+</tr>
+<tr>
+<td>belts</td>
+<td>jacket</td>
+<td>other accessories</td>
+<td>jumpsuits</td>
+</tr>
+<tr>
+<td>sweater</td>
+<td>joggers</td>
+<td>sandals</td>
+<td>crossbody/messenger bag</td>
+</tr>
+</tbody>
+</table>
+</small>
+<aside class="notes">
+32 categories
+</aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<ul>
+<li><b>1st approach: Bag of Words:</b> based on frequency, ignoring grammar or context. Also, vectors have 4k/8k dimensions depending on the training set.</li>
+<li><b>2nd approach: word2vec:</b> shallow neural networks trained to reconstruct context. Vectors are distributed representations with a fixed dimension, independently on the training set.</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h2>Classification results</h2>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-18eh" rowspan="2">Model</th>
+    <th class="tg-18eh" colspan="2">Classification accuracy</th>
+  </tr>
+  <tr>
+    <td class="tg-18eh">Text</td>
+    <td class="tg-18eh">Image</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Ours-baseline</td>
+    <td class="tg-wp8o">99.78%</td>
+    <td class="tg-wp8o">71.73%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Ours-word2vec</td>
+    <td class="tg-mqa1">99.97%</td>
+    <td class="tg-mqa1">90.06%</td>
+  </tr>
+</tbody>
+</table>
+</section>
+
 <section data-background-image="imgs/backgrounds/black-01.png">
 <h3>Superpixel segmentation</h3>
 <ul>
