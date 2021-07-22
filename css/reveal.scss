@@ -547,7 +547,7 @@ $controlsArrowAngleActive: 36deg;
 .reveal .progress {
 	position: absolute;
 	display: none;
-	height: 1%;
+	height: 2%;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -587,7 +587,7 @@ $controlsArrowAngleActive: 36deg;
 	top: 8px;
 	z-index: 31;
 	font-family: Helvetica, sans-serif;
-	font-size: 28px;
+	font-size: 48px;
 	line-height: 1;
 	color: #fff;
 	background-color: rgba( 0, 0, 0, 0.0 );
@@ -1112,6 +1112,7 @@ $controlsArrowAngleActive: 36deg;
 		opacity: 0;
 		visibility: hidden;
 		overflow: hidden;
+		object-fit: contain;
 
 		background-color: rgba( 0, 0, 0, 0 );
 
@@ -1125,7 +1126,7 @@ $controlsArrowAngleActive: 36deg;
 
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
 	}
 
 	.reveal .slide-background.stack {
@@ -1152,7 +1153,7 @@ $controlsArrowAngleActive: 36deg;
 	max-height: none;
 	top: 0;
 	left: 0;
-	object-fit: cover;
+	object-fit: contain;
 }
 	.reveal .slide-background[data-background-size="contain"] video {
 		object-fit: contain;

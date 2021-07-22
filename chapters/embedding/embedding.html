@@ -1,40 +1,37 @@
 <section id="embedding"
 	 data-background-video="videos/chapter-blue.mp4"
          data-background-video-loop data-background-video-muted>
-	<h1><p class="fragment fade-in">FASHION MULTI-MODAL EMBEDDING</p></h1>
+	<h1><p class="fragment fade-in"; style="color:white;">FASHION MULTI-MODAL EMBEDDING</p></h1>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Motivation</h2>
-<ul>
-<li>Increasing online access and smartphone usage</li>
-</ul>
-<img data-src="chapters/intro/imgs/ecommerce.png"; height=400px>
+<h2>Introduction</h2>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Motivation</h2>
+<h3>Motivation</h3>
 <div class="container">
   <video data-autoplay loop src="chapters/embedding/videos/instagram.mp4"; height=400px></video>
   <div class="container__text">
 <ul>
-<li>Social networks (Instagram users upload every day 95 million pictures and 500 million stories)</li>
+<li>Increasing online access and smartphone usage</li>
+<li>Images uploaded by the users have a lot of information </li>
+<li>Images not tagged or described are virtually unfindable by classical search</li>
 </ul>
   </div>
 </div>
-
 <aside class="notes">
 Finding a product -> daunting task<br>
 Thousands of images + metadata, needle in a haystack<br>
+(Instagram users upload every day 95 million pictures and 500 million stories)<br>
 Some numbers<br>
 Machine learning techniques are required<br>
-Images not tagged or described are virtually unfindable by classical search<br>
 Specific system needed to narrow the gap between img and text descriptors<br>
 </aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Motivation</h2>
+<h3>Motivation</h3>
 <ul>
 <li>Multi-modal data: <span class="fragment highlight-current-blue"><b>images</b></span> with <span class="fragment highlight-current-blue"><b>textual metadata</b></span>.
 </li>
@@ -45,77 +42,62 @@ Specific system needed to narrow the gap between img and text descriptors<br>
           data-background-interactive>
 </section>
 
-<section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Motivation</h2>
-<ul>
-<li>Finding a product is a daunting task</li>
-<li>Thousands of images + metadata, increasing everyday</li>
-<li>Machine learning techniques are required</li>
-<li>Images not tagged or described are virtually unfindable by classical search</li>
-<li>Specific system needed to narrow the gap between img and text descriptors</li>
-</ul>
-</section>
-
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="convex-in none-out">
-<h2>Goals</h2>
+>
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding1.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding2.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding3.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding4.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding5.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding6.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Goals</h2>
+         >
+<h3>Goals</h3>
 <img data-src="chapters/embedding/imgs/embedding/embedding7.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<img data-src="chapters/embedding/imgs/intro.png">
-</section>
-
-<section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Contributions</h2>
+<h3>Contributions</h3>
 <ul>
 <!-- li>NN architecture for processing images and text trained such that dist between the output of related img-text is minimized and unrelated maximized</li-->
-<li>Representation space (embedding) for features coming from visual and textual data</li>
+<li>Representation space (<span class="fragment highlight-current-blue">embedding</span>) for features coming
+from <span class="fragment highlight-current-blue">visual</span> and <span class="fragment highlight-current-blue">textual</span> data</li>
 <li>Learned features:</li>
 <ul>
-<li>are smooth </li>
-<li>come from multiple explanatory features</li>
-<li>are valid for retrieval and classification tasks</li>
-<li>retain semantic information</li>
+<li>are <span class="fragment highlight-current-blue">smooth</span></li>
+<li>come from <span class="fragment highlight-current-blue">multiple explanatory features</span></li>
+<li>retain <span class="fragment highlight-current-blue">semantic information</span>, therefore are valid for retrieval and classification tasks</li>
 </ul>
-<li>Evaluation of retrieval and classification tasks</li>
-<li>Textual representations with the continuity of the visual space</li>
+<li>Textual representations with the <span class="fragment highlight-current-blue">continuity</span> of the visual space</li>
+<li><span class="fragment highlight-current-blue">Evaluation</span> of retrieval and classification tasks</li>
 </ul>
 <aside class="notes">
 smooth features: small changes in input -> small changes in embedding
@@ -123,49 +105,53 @@ smooth features: small changes in input -> small changes in embedding
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="convex-in none-out">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa1.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa2.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa3.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa4.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa5.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa6.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Context</h3>
 <img data-src="chapters/embedding/imgs/soa/soa7.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
 <h2>Related work</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Multi-modal embeddings</h3>
 <img data-src="chapters/embedding/imgs/soa/emb2-01.png"; height="175px">
 <img data-src="chapters/embedding/imgs/soa/emb1-01.png"; height="175px">
 <ul>
@@ -176,206 +162,199 @@ smooth features: small changes in input -> small changes in embedding
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="convex-in none-out">
-<h2>Related work</h2>
+         >
+<h3>Retrieval</h3>
 <img data-src="chapters/embedding/imgs/cbir1.png">
+<aside class="notes">
+Still, bridging the so-called "semantic gap" between low-level pixel features readable by machines and high-level semantic information understood by humans remains one of the main problems of CBIR.
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Retrieval</h3>
 <img data-src="chapters/embedding/imgs/cbir2.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Related work</h2>
+         >
+<h3>Retrieval</h3>
 <img data-src="chapters/embedding/imgs/cbir3.png">
-</section>
-
-<section data-transition="convex-in none-out"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network1.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network2.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network3.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network4.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network5.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network6.png">
-</section>
-
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<h3>Network</h3>
-<img data-src="chapters/embedding/imgs/network/network7.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
 <h2>Method</h2>
-<h3>Text branch</h3>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png"
+         >
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network1.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network2.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network3.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network4.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network5.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network6.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
+<img data-src="chapters/embedding/imgs/network/network7.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>Network architecture</h3>
 <ul>
-<li>word2vec</li>
+<li><b>Image branch</b></li>
 <ul>
-<li>500-dimensional word descriptors</li>
+<li>AlexNet architecture pretrained on a fashion subset of ImageNet</li>
+<li>Last layer replaced by a 128-dimensional output FC</li>
+</ul>
+<li><b>Text branch</b></li>
+<ul>
+<li>500-dimensional word2vec descriptors</li>
 <li>Context window size of 3 words</li>
 <li>Trained with >400k fashion textual descriptions</li>
 </ul>
 </ul>
 </section>
 
-<section data-transition="convex-in-none-out"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h3>word2vec</h3>
+<img data-src="chapters/embedding/imgs/word2vec_scheme1.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter1-01.png">
 </section>
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter2-01.png">
 </section>
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter3-01.png">
 </section>
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter4-01.png">
 </section>
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter5-01.png">
 </section>
-<section data-transition="none"
-         data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <h3>word2vec</h3>
 Text preprocessing
 <img data-src="chapters/embedding/imgs/fitter/fitter6-01.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
 <h3>word2vec</h3>
 Example of a context window of 2 words
 <img data-src="chapters/embedding/imgs/context.gif">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-<img data-src="chapters/embedding/imgs/word2vec_scheme1.png">
+<h3>word2vec</h3>
+<img data-src="chapters/embedding/imgs/word_vectors.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-king - man + woman = queen
+<h3>word2vec</h3>
+<img data-src="chapters/embedding/imgs/blue.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
-Table with closest words (shirt -> tee, tshirt, tank)<br>
-(eye -> mouth, pupil, teeth, nose)<br>
-(blue -> purple, teal, green, aqua)<br>
+<h3>word2vec</h3>
+<img data-src="chapters/embedding/imgs/shirt.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Method</h2>
+<h3>Contrastive loss</h3>
 <video data-autoplay src="videos/contrastive.mp4"></video>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="convex-in none-out">
-<h2>Method</h2>
+>
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive0.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive1.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive2.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive3.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive4.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Contrastive loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/contrastive5.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="convex-in none-out">
-<h2>Method</h2>
+         >
+<h3>Global loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/losses1.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Global loss</h3>
 <img data-src="chapters/embedding/imgs/contrastive/losses2.png">
 </section>
 <section data-background-image="imgs/backgrounds/blue-01.png"
-         data-transition="none">
-<h2>Method</h2>
-<img data-src="chapters/embedding/imgs/contrastive/losses3.png">
+         >
+         id="globalloss">
+<h3>Global loss</h3>
+<a data-preview-link href="#/overlaploss">
+<img data-src="chapters/embedding/imgs/contrastive/losses3.png"></a>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
 <h2>Dataset</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
 <ul>
 <li><span class="fragment highlight-current-blue"><em>431,841 images</em></span>
 of products with
@@ -393,7 +372,7 @@ of products with
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Dataset categories</h2>
+<h3>Dataset categories</h3>
 <small>
 <table>
 <tbody>
@@ -454,16 +433,30 @@ of products with
 </tbody>
 </table>
 </small>
+<aside class="notes">
+32 categories
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
 <h2>Results</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<ul>
+<li>1st approach: Bag of Words: based on frequency, ignoring grammar or context. Also, vectors have 4k/8k dimensions depending on the training set.</li>
+<li>2nd approach: word2vec: shallow neural networks trained to reconstruct context. Vectors are distributed representations with a fixed dimension, independently on the training set.</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/blue-01.png">
+<h2>Retrieval results</h2>
 <aside class="notes">
 1st approach: Bag of Words: based on frequency, ignoring grammar or context. Also, vectors have 4k/8k dimensions depending on the training set.<br>
 2nd approach: word2vec: shallow neural networks trained to reconstruct context. Vectors are distributed representations with a fixed dimension, independently on the training set.<br>
 </aside>
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:0;margin-left:auto;margin-right:auto}
 .tg td{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:34px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:34px;
@@ -504,7 +497,7 @@ of products with
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Results</h2>
+<h2>Retrieval results</h2>
 <table class="tg">
 <thead>
   <tr>
@@ -546,7 +539,7 @@ of products with
 </section>
 
 <section data-background-image="imgs/backgrounds/blue-01.png">
-<h2>Results</h2>
+<h2>Classification results</h2>
 <table class="tg">
 <thead>
   <tr>
@@ -585,10 +578,10 @@ of products with
 <section data-background-image="imgs/backgrounds/blue-01.png">
 <h2>Summary</h2>
 <ul>
-<li>Opportunity for e-commerces to classify and tag images without associated text or fill in missing information looking for similar texts</li>
-<li>Presented results on a challenging real-world dataset, obtaining low median rank values</li>
-<li>At the same time, very good classification accuracy for both images and texts</li>
-<li>Approach easily amenable to large existing e-commerce datasets</li>
+<li>Presented retrieval results on a <span class="fragment highlight-current-blue">challenging real-world dataset</span>, obtaining low median rank values</li>
+<li>At the same time, <span class="fragment highlight-current-blue">very good classification accuracy</span> for both images and texts</li>
+<li>Approach <span class="fragment highlight-current-blue">easily amenable</span> to large existing e-commerce datasets</li>
+<li>Opportunity for e-commerces to <span class="fragment highlight-current-blue">classify and tag</span> images without associated text or fill in missing information looking for similar texts</li>
 </ul>
 <aside class="notes">
 Training the embedding such that distances correspond to similarities, our approach can be easily used for retrieval tasks.<br>

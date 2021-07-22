@@ -2,5 +2,35 @@
 	 data-background-video="videos/chapter-black.mp4"
          data-background-video-loop data-background-video-muted>
 	<h1></h1>
-	<h1><p class="fragment fade-in">CONCLUSIONS</p></h1>
+	<h1><p class="fragment fade-in"; style="color:white;">CONCLUSIONS</p></h1>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<ul>
+<li>Our work ranges from a new <span class="fragment highlight-current-blue">low-level</span> algorithm for superpixel segmentation to
+a more <span class="fragment highlight-current-blue">abstract</span> interpretation of images tied with their textual metadata
+(first using entire images and then moving to a region-specific interpretation)</li>
+<li>We evolve from the <span class="fragment highlight-current-blue">classical computer vision</span> approach used in the superpixel
+segmentation to the usage of the nowadays ubiquitous <span class="fragment highlight-current-blue">CNNs</span> in subsequent chapters</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<h3>Future work</h3>
+<ul>
+<li>Our superpixel algorithm is well-suited to be treated with CNNs: inputs are images, and our energy functions can be used as losses</li>
+<li>Replacing AlexNet by other architectures</li>
+<li>Replacing the contrastive loss with triplet loss or magnet loss</li>
+<li>Changing the bounding box proposal to use a RPN</li>
+<li>Switch from the discrete bounding box system to a more continuous pixel-level approach</li>
+<li>Using some of the recent advances focused on attention</li>
+</ul>
+<aside class="notes">
+Advantage: GPUs, try different optimizers, use data augmentation to regularize, get rid of hyperparameters<br>
+ResNet or Inception-v4, that help with the vanishing gradient problem<br>
+triplet maximizes distance between negative and minimies positives simultaneously<br>
+magnet loss considers distributions of samples to respect intra-class variation and inter-class similarity in contrast to the unimodal separation enforced by the contrastive and triplet losses<br>
+RPN would be x10 faster<br>
+Use transformers for attention<br>
+</aside>
 </section>

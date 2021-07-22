@@ -1,11 +1,22 @@
 <section id="mainproduct"
 	 data-background-video="videos/chapter-red.mp4"
          data-background-video-loop data-background-video-muted>
-	<h1><p class="fragment fade-in">MAIN PRODUCT DETECTION</p></h1>
+	<h1><p class="fragment fade-in"; style="color:white;">MAIN PRODUCT DETECTION</p></h1>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <img data-src="chapters/mainproduct/imgs/teaser4.gif"; height=600px>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Goal</h2>
+<p>Detect the <b><span class="fragment highlight-current-red">main product</span></b>, considering the case where the image
+contains <span class="fragment highlight-current-red">several other garments</span> and has additional <span class="fragment highlight-current-red">metadata</span> associated.
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Motivation</h2>
+Online products are normally presented tastefully <span class="fragment highlight-current-red">combined</span> and with <span class="fragment highlight-current-red">metadata</span>.<br>
 </section>
 
 <section data-background-iframe="https://www.oliveclothing.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
@@ -16,117 +27,237 @@
           data-background-interactive>
 </section>
 
-<section data-background-iframe="https://cutterbuck.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
+<!-- section data-background-iframe="https://cutterbuck.com/?_ga=2.110146957.961234722.1625700494-1019772797.1625700494"
           data-background-interactive>
-</section>
-
-<section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Introduction</h2>
-Most of current commercial transactions occur online (numbers).<br>
-Products are presented online tastefully combined and with metadata.<br>
-</section>
+</section-->
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <h2>Contributions</h2>
 <ul>
-<li>System to detect the most relevant product in a fashion image given the metadata. This allows to train specific product classifiers, or used as a first step in tasks like VQA.</li>
-<li>Evaluation of the method performance in a different e-commerce</li>
+<li>System to detect the most <span class="fragment highlight-current-red">relevant product</span> in a fashion image given the metadata. This allows to train specific product classifiers, or used as a first step in tasks like VQA.</li>
+<li><span class="fragment highlight-current-red">Evaluation</span> of the method performance in a different e-commerce</li>
 </ul>
+<aside class="notes">
+subsequently train specific product classifiers, which do not need to be fed with the whole image<br>
+</aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Related Work</h2>
+<img data-src="chapters/mainproduct/imgs/MIE.png">
+<ul>
+<li>Text data consists of simple ImageNet labels</li>
+<li>The authors retrieve labels closest to image regions</li>
+</ul>
+<aside class="notes">
+automatic multi-labeling, try to generate object proposals
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <h2>Related Work</h2>
 <ul>
-<li><strike>Multi-modal embeddings for img + text (previous chapter)</strike></li>
-<li>Object detection</li>
-<li>Phrase localization</li>
-<li>Mention here GPT-3 or dall-e</li>
+<li>Focused on phrase localization</li>
+<li>Only enforces ranking with hinge losses, not classification</li>
 </ul>
-<img data-src="chapters/mainproduct/imgs/cat.png"; width=auto; height=100px>
-<img data-src="chapters/mainproduct/imgs/MIE.png"; width=auto; height=100px>
-<img data-src="chapters/mainproduct/imgs/moto.png"; width=auto; height=100px>
+<img data-src="chapters/mainproduct/imgs/moto.png">
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Related Work</h2>
+<ul>
+<li>Visual Question Answering (VQA)</li>
+<li>Focused on many-to-many correspondences</li>
+</ul>
+<img data-src="chapters/mainproduct/imgs/cat.png">
+<aside class="notes"
+While they focus on many-to-many correspondences, i.e. relating parts of sentences to regions of images, our work tries to associate all the available textual metadata to only one region of the image.
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png"
-         data-transition="convex-in none-out">
+>
 <h2>Method</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+>
+<h3>Network architecture</h3>
 <img data-src="chapters/mainproduct/imgs/network/network1.png">
 </section>
 <section data-background-image="imgs/backgrounds/red-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Network architecture</h3>
 <img data-src="chapters/mainproduct/imgs/network/network2.png">
 </section>
 <section data-background-image="imgs/backgrounds/red-01.png"
-         data-transition="none">
-<h2>Method</h2>
+         >
+<h3>Network architecture</h3>
 <img data-src="chapters/mainproduct/imgs/network/network3.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Method</h2>
-Goal: detect the main product, considering the case where the image contains several other garments and has additional metadata associated.
-Different approaches:<br>
-<ol>
-<li>Full image</li>
-<li>Bboxes</li>
-<li>RoI pooling</li>
-</ol>
-<br>Overlap loss
-</section>
-
-<section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Method</h2>
+<h3>Network architecture</h3>
+<style type="text/css">
+#block1
+{
+    width: 50%;
+    float: left;
+}
+#block2
+{
+    width: 50%;
+    float: right;
+}
+#block3
+{
+    background-color: #F5F5F5;
+    margin: 10px 20px;
+    padding: 20px;
+    width: 400px;
+    float: right;
+}
+</style>
+<div id="block1">
 <ul>
 <li>Common parts:
 <ul>
-<li>Contrastive loss (formula)</li>
-<li>Classification loss (formula)</li>
-<li>Global loss (formula)</li>
+<li>Contrastive loss</li>
+<li>Classification loss</li>
+<li>Global loss</li>
 <li>Text network</li>
 </ul>
 </ul>
+</div>
+<div id="block2">
+<ul>
+<li>Different approaches:</li>
+<ul style="list-style-type:none;">
+<li>A. Full image</li>
+<li>B. Bounding boxes</li>
+<li>C. RoI pooling</li>
+</ul>
+</ul>
+</div>
+  </section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Overlap loss</h3>
+<img data-src="chapters/mainproduct/imgs/loss/loss1.png">
+</section>
+<section data-background-image="imgs/backgrounds/red-01.png"
+         id="overlaploss">
+<h3>Overlap loss</h3>
+<a data-preview-link href="#/globalloss">
+<img data-src="chapters/mainproduct/imgs/loss/loss2.png"></a>
+</section>
+<section data-background-image="imgs/backgrounds/red-01.png"
+>
+<h3>Overlap loss</h3>
+<img data-src="chapters/mainproduct/imgs/loss/loss3.png">
+</section>
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Overlap loss</h3>
+<img data-src="chapters/mainproduct/imgs/loss/loss4.png">
+<aside class="notes">
+Overlap loss is just L1 regression of GT and predicted overlap, computed as IoU
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
-<h2>RoI pooling</h2>
-explain RoI pooling (fig 5.6)
-</section>
-
-<section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Method</h2>
-<img data-src="chapters/mainproduct/imgs/original.png"; width=auto; height=300px>
-<img data-src="chapters/mainproduct/imgs/deformed.png"; width=auto; height=300px>
-<img data-src="chapters/mainproduct/imgs/regular.png"; width=auto; height=300px>
+<h3>RoI pooling</h3>
+<img data-src="chapters/mainproduct/imgs/roi.png">
+<ul>
+<li>10x faster training / 20x faster testing</li>
+<li>Input to our network: 6x6x256 regions</li>
+</ul>
+<aside class="notes">
+we can use the same feature map for all the proposals which enables us to pass the entire image to the CNN instead of passing all proposals individually.
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <h2>Dataset</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Size and type of data</h3>
 Images and metadata of products from fashion e-commerce sites.
 <ul>
-<li><b>Train:</b> 458,700 products from 8 different e-commerces</li>
+<li><b>Train:</b> 458,700 products from eight different e-commerces</li>
 <li><b>Test:</b> 3,000 products from a different e-commerce with the GT bounding box</li>
 </ul>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Results</h2>
-<ul>
-<li>Qualitative (image)</li>
-<li>Quantitative (table 5.1)</li>
-</ul>
+<h3>Categories</h3>
+<small>
+<table>
+<tbody>
+<tr>
+<td>vest</td>
+<td>skirt</td>
+</tr>
+<tr>
+<td>swimwear</td>
+<td>suits</td>
+</tr>
+<tr>
+<td>shorts</td>
+<td>jumpsuits</td>
+</tr>
+<tr>
+<td>shoes</td>
+<td>pants</td>
+</tr>
+<tr>
+<td>tops</td>
+<td>hats</td>
+</tr>
+<tr>
+<td>accessories</td>
+<td>belts</td>
+</tr>
+<tr>
+<td>glasses/sunglasses</td>
+<td>backpack</td>
+</tr>
+<tr>
+<td>bags</td>
+<td>outerwear</td>
+</tr>
+<tr>
+<td>dress</td>
+<td>sweatshirt/sweaters</td>
+</tr>
+<tr>
+<td>background</td>
+</tr>
+</tbody>
+</table>
+</small>
+<aside class="notes">
+19 categories
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Results</h2>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Methodology</h3>
 <style type="text/css">
 .container {
   border: 0px solid blue;
-  padding: 100px 0px 0px;
-  max-width: 1920px;
+  padding: 0px 0px 0px;
+  max-width: 100%;
   display: flex;
   &__image {
     margin: 0px 0px 0 0;
-    width: 1000px;
+    width: 100%;
     object-fit: contain;
     align-self: flex-start;
   }
@@ -139,29 +270,208 @@ Images and metadata of products from fashion e-commerce sites.
   <!-- img class="container__image" src="https://mtdata.ru/u7/photo53A0/20946911428-0/original.jpg#20946911428"-->
   <video data-autoplay loop src="chapters/mainproduct/videos/mainprod-square.mp4"; height=400px></video>
   <div class="container__text">
-<p class="fragment">1. Extract features for the proposals</p>
-<p class="fragment">2. Extract features for the text</p>
-<p class="fragment">3. Compute distance</p>
-<p class="fragment">4. Check overlap with the GT</p>
+<ul style="list-style-type:none;">
+<li><p class="fragment">1. Extract features for the proposals</p></li>
+<li><p class="fragment">2. Extract features for the text</p></li>
+<li><p class="fragment">3. Compute distance</p></li>
+<li><p class="fragment">4. Check overlap with the GT</p></li>
+</ul>
+  </div>
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Qualitative results</h3>
+<div class="container">
+  <img class="container__image" src="chapters/mainproduct/imgs/results/tshirt.png"; height="400px">
+  <div class="container__text">
+  <small>
+<ul style="list-style-type:none;">
+<br>
+<li> <b>Category:</b> T-Shirts.</li>
+<li><b>Description:</b> Women >T- Shirts. Twik - Boyfriend tee Twik. Exclusively from Twik. An ultra practical must-have
+neutral basic. Ultra comfortable 100% cotton weave. Sewn rolled sleeves. The model is wearing size small. </li>
+<li><b>Title:</b> Twik - Boyfriend tee (Women, Green, X-SMALL).</li>
+<li><b>Color:</b> Mossy Green.</li>
+</ul>
+  </small>
+  </div>
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Qualitative results</h3>
+<div class="container">
+  <img class="container__image" src="chapters/mainproduct/imgs/results/shirt.png"; height="400px">
+  <div class="container__text">
+  <small>
+<ul style="list-style-type:none;">
+<br>
+<li> <b>Category:</b> Shirts & Blouses.</li>
+<li><b>Description:</b> Men Color: Casual shirts. Le 31 - All-over check shirt. Regular fit Le 31. Exclusively from Le 31 for men.
+ Trendy all-over checks redesigned in a palette perfect for the upcoming season. Regular fit Button-down collar. Contrasting underside. Ultra comfortable
+ 100% cotton poplin. The model is wearing size medium.</li>
+<li><b>Title:</b> Le 31 - All-over check shirt Regular fit (Men, Red, XX- LARGE).</li>
+<li><b>Color:</b> Khaki.</li>
+</ul>
+  </small>
+  </div>
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Qualitative results</h3>
+<div class="container">
+  <img class="container__image" src="chapters/mainproduct/imgs/results/tshirt2.png"; height="400px">
+  <div class="container__text">
+  <small>
+<ul style="list-style-type:none;">
+<br>
+<li> <b>Category:</b> T-Shirts.</li>
+<li><b>Description:</b> Women >T-Shirts. Twik - Solid high-neck tank Twik. Exclusively from Twik. A fitted
+high-neck piece perfect for casual looks. Comfortable, stretch jersey. The model is wearing size small.</li>
+<li><b>Title:</b> Twik - Solid high-neck tank (Women, Red, X- SMALL).</li>
+<li><b>Color:</b> Ruby Red.</li>
+</ul>
+  </small>
+  </div>
+</div>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png"
+         >
+<h3>Qualitative results</h3>
+<div class="container">
+  <img class="container__image" src="chapters/mainproduct/imgs/results/coat.png"; height="400px">
+  <div class="container__text">
+  <small>
+<ul style="list-style-type:none;">
+<br>
+<li> <b>Category:</b> Coats & Jackets.</li>
+<li><b>Description:</b> Women >Coats. Vero Moda - Long baseball jacket Vero Moda. Vero Moda at Icone A
+preppy, chic and sporty piece for a trendy fall look. Blended wool with an ultra soft brushed finish and
+fine satiny lining. Ribbed knit collar and cuffs Snap closure. Zip pockets. The model is wearing size small.</li>
+<li><b>Title:</b> Vero Moda - Long baseball jacket (Women, Black, X-SMALL).</li>
+<li><b>Color:</b> Black.</li>
+</ul>
+  </small>
   </div>
 </div>
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
-<h2>Results</h2>
-<img data-src="chapters/mainproduct/imgs/tsne.png"; width=auto; height=300px>
+<h3>Quantitative results</h3>
+<small>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-18eh" rowspan="2">Architecture</th>
+    <th class="tg-18eh" colspan="6">recall@top-K</th>
+  </tr>
+  <tr>
+    <td class="tg-18eh">1</td>
+    <td class="tg-18eh">3</td>
+    <td class="tg-18eh">5</td>
+    <td class="tg-18eh">20</td>
+    <td class="tg-18eh">50</td>
+    <td class="tg-18eh">100</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">1. Full Image</td>
+    <td class="tg-baqh">21.87%</td>
+    <td class="tg-baqh">44.74%</td>
+    <td class="tg-baqh">58.48%</td>
+    <td class="tg-baqh">76.06%</td>
+    <td class="tg-baqh">79.58%</td>
+    <td class="tg-baqh">82.47%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2. B. boxes</td>
+    <td class="tg-baqh"><span style="font-weight:400;font-style:normal">53.52% </span></td>
+    <td class="tg-baqh">70.42%</td>
+    <td class="tg-baqh">77.46%</td>
+    <td class="tg-baqh">90.07%</td>
+    <td class="tg-baqh">92.11%</td>
+    <td class="tg-baqh">92.96%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3. Overlap</td>
+    <td class="tg-baqh"><span style="font-weight:400;font-style:normal">52.11%</span></td>
+    <td class="tg-baqh">78.87%</td>
+    <td class="tg-baqh">81.69%</td>
+    <td class="tg-18eh">90.24%</td>
+    <td class="tg-baqh">91.30%</td>
+    <td class="tg-baqh">91.58%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">4. RoI pool.</td>
+    <td class="tg-18eh">56.34%</td>
+    <td class="tg-18eh">80.01%</td>
+    <td class="tg-18eh">84.51%</td>
+    <td class="tg-baqh">90.14%</td>
+    <td class="tg-18eh">92.96%</td>
+    <td class="tg-18eh">95.77%</td>
+  </tr>
+</tbody>
+</table>
+</small>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Quantitative results</h3>
+<small>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-18eh" rowspan="2">Architecture</th>
+    <th class="tg-18eh" colspan="2">Classification accuracy</th>
+  </tr>
+  <tr>
+    <td class="tg-18eh">Text</td>
+    <td class="tg-18eh">Image</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">1. Full Image</td>
+    <td class="tg-18eh">98.08%</td>
+    <td class="tg-18eh">90.06%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2. Bounding boxes</td>
+    <td class="tg-wp8o">94.22%</td>
+    <td class="tg-wp8o">88.63%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3. 2 with overlap</td>
+    <td class="tg-wp8o">97.24%</td>
+    <td class="tg-wp8o">84.74%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">4. RoI pooling</td>
+    <td class="tg-wp8o">96.91%</td>
+    <td class="tg-wp8o">80.33%</td>
+  </tr>
+</tbody>
+</table>
+</small>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<img data-src="chapters/mainproduct/imgs/tsne.png">
 </section>
 
 <section data-background-image="imgs/backgrounds/red-01.png">
 <h2>Summary</h2>
-Method that uses textual metadata to detect the product of interest in fashion e-commerce images.<br>
-Text parameterized using a distributed representation<br>
-Compact representations of bboxes from frozen layers of a pre-trained network.<br>
-Comparison of several architectures, different loss type combinations.<br>
-80% of the cases ranked in top-3<br>
-Clothing category classification<br>
-Relevance for Wide Eyes -> other publication.<br>
-<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-"Your text here."
-</blockquote>
+<ul>
+<li>Method that uses textual metadata to detect the product of interest in fashion e-commerce images.</li>
+<li>Compact representations of bboxes from frozen layers of a pre-trained network.</li>
+<li>Comparison of several architectures with a combination of different loss types.</li>
+<li>80% of the cases ranked in top-3</li>
+<li>Side benefit: clothing category classification</li>
 </section>

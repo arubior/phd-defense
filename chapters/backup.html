@@ -1,0 +1,125 @@
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Algorithm</h3>
+<pre><code data-line-numbers="1|2|3|4-5|6|7|8|9-12|16|18">Set K, it_max and area_min
+Compute edges of the input image
+Place initial seeds Sk depending on the edges density
+Set label L_i = 0 for each pixel
+Set energy E_i = E_0 for each pixel
+while #iter <= it_max do
+	for each seed S_k do
+		for each pixel in a 2Sx2S region around S_k do
+			Compute the energy E_ik of the pixel w.r.t. S_k
+			if E_ik < E_i then
+				E_i = E_ik
+				L_i = k
+			end if
+		end for
+	end for
+	Update seeds values as S_k = mean(pixels with L_i == k)
+end while
+Merge small superpixels with bigger adjacent ones
+</code></pre>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Seeds initialization</h3>
+<font size="6">
+<ul ul style="list-style-type:none;">
+<li><p class="fragment">1. Regularly distribute the initial seeds in a grid with side $S = \sqrt{N/K}$</p></li>
+<li><p class="fragment">2. Based on edge density inside each $S\times S$ region, add or delete seeds based on $T_{ad} = \dfrac{\sum{e_i}}{N}$:
+\begin{equation}
+\left\{
+\begin{array}{lrcl}
+\text{Add}, & \text{if } \dfrac{\left(\sum_S{e_i}\right)}{S^2} & > & 3\cdot T_{ad} \\
+\text{Delete}, & \text{if } \dfrac{\left(\sum_S{e_i}\right)}{S^2} & < & T_{ad}\\
+\end{array}
+\right.
+\end{equation}
+</p></li>
+<li><p class="fragment">3. Place seeds in the centroid of empty regions larger than $S\times S$</p></li>
+</ul>
+</font>
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+\begin{equation}
+E_{lab} = \sqrt{(l_k - l_i)^2 + (a_k - a_i)^2 + (b_k - b_i)^2}
+\end{equation}
+\begin{equation}
+E_{xy} = \sqrt{(x_k - x_i)^2 + (y_k - y_i)^2}
+\end{equation}
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Variation of Information (VOI)</h3>
+Given two different clusterings $X=\{X_1, X_2, \ldots, X_k\}$ and $Y=\{Y_1, Y_2, \ldots, Y_l\}$<br>
+$$VOI(X; Y) = -\sum_{i, j}r_{ij}\cdot\left[log\left(\frac{r_{ij}}{p_i}\right) + log\left(\frac{r_{ij}}{q_j}\right)\right]$$
+$p_i = \frac{\mid X_i\mid}{N}$, $q_i = \frac{\mid Y_i\mid}{N}$, $r_{ij} = \frac{\mid X_i\mid \cap \mid Y_j\mid}{N} $
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Undersegmentation Error</h3>
+$$UE = \frac{1}{\mid GT\mid}\sum_{S\in GT}\left(\frac{\sum_{P:P\cap S\neq 0}min\left(\mid P_{in}\mid, \mid P_{out}\mid\right)}{\mid S\mid}\right)$$
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Boundary Recall</h3>
+$$BR = \frac{TP}{TP + FN}$$
+</section>
+
+<section data-background-image="imgs/backgrounds/gray-01.png">
+<h3>Seeds initialization</h3>
+<img data-src="chapters/superpixels/imgs/seeds/cartel2.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/img1.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/moon.png"; width=auto; height=200px>
+<img data-src="chapters/superpixels/imgs/seeds/perrete.png"; width=auto; height=200px>
+</section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h2>Method</h2>
+<img data-src="chapters/mainproduct/imgs/original.png"; width=auto; height=300px>
+<img data-src="chapters/mainproduct/imgs/deformed.png"; width=auto; height=300px>
+<img data-src="chapters/mainproduct/imgs/regular.png"; width=auto; height=300px>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<h3>Superpixel segmentation</h3>
+<ul>
+<li>Too many superpixels had to be annotated to select a meaningful region</li>
+<li>Reducing the number of superpixels decreased the precision</li>
+<li>The problem was solved with BASS</li>
+<li>Evaluated in many different fashion and generic datasets with good results</li>
+</ul>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<h3>Superpixel segmentation: present and future work</h3>
+<ul>
+<li>Since 2015, superpixel segmentation has been tackled using deep learning techniques</li>
+<li>One of the most relevant works is SSN (Superpixel Sampling Network), a differentiable end-to-end trainable superpixel segmentation algorithm</li>
+<li>Our algorithm is well-suited to be treated with CNNs: inputs are images, and our energy functions can be used as losses</li>
+</ul>
+<aside class="notes">
+Advantage: GPUs, try different optimizers, use data augmentation to regularize, get rid of hyperparameters
+</aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<h3>Multi-modal embedding</h3>
+<ul>
+<li>Creation of a multi-modal embedding capable of encapsulating images and texts</li>
+<li>Good retrieval results with both images and texts as queries in a very challenging dataset</li>
+<li>In addition, high precision values in classification</li>
+</ul>
+<aside class="notes">
+The dataset is challenging due to big size and extremely similar products
+</aside>
+</section>
+
+<section data-background-image="imgs/backgrounds/black-01.png">
+<h3>Main product detection</h3>
+<ul>
+<li>Took advantage of the RoI pooling layer</li>
+<li>New term added to the loss to maximize the overlap with the GT box</li>
+</ul>
+</section>

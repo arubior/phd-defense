@@ -24,14 +24,14 @@
 					 data-background-size="contain">
 				</section>
 
-				<section data-background-image="imgs/backgrounds/color-01.png">
+				<section data-background-image="imgs/backgrounds/color-empty-01.png">
 				<h2>Contents</h2>
 					<ol>
 					<li><a href="#/intro">Introduction</a></li>
 					<li><a href="#/superpixels">Superpixel Segmentation</a></li>
 					<li><a href="#/embedding">Fashion Multi-modal Embedding</a></li>
 					<li><a href="#/mainproduct">Main Product Detection</a></li>
-					<li><a href="#/we">Contributions to Wide Eyes</a></li>
+					<li><a href="#/we">Applications and Current State</a></li>
 					<li><a href="#/conclusions">Conclusions</a></li>
 					</ol>
 				</section>
@@ -43,6 +43,13 @@
 				<section data-external="chapters/mainproduct/mainproduct.html"> </section>
 				<section data-external="chapters/we/we.html"> </section>
 				<section data-external="chapters/conclusions/conclusions.html"> </section>
+				<section data-background-image="imgs/backgrounds/color-empty-01.png">
+				<h1>Thanks</h1> </section>
+				<section data-background-image="imgs/backgrounds/color-empty-01.png"
+					 data-background-color="black">
+				<h1>Questions?</h1>
+				</section>
+				<section data-external="chapters/backup.html"> </section>
 			</div>
 		</div>
 
@@ -51,6 +58,7 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/math/math.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<!-- Drawing plugin (activate with T)-->
 		<script src="plugin/drawer/drawer.js"></script>
 		<script>
@@ -61,11 +69,16 @@
 				hash: true,
 				slideNumber: true,
 				progress: true,
-				transition: 'convex',
+				transition: 'none',
 				backgroundTransition: 'fade',
+				backgroundSize: 'contain',
+				width: 1080,
+				height: 720,
+				// margin: 0.1,
+				// mainFontSize: 178,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer, RevealMath ],
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealDrawer, RevealMath, RevealZoom ],
 
 				dependencies: [{src: 'node_modules/revealjs-animated/dist/revealjs-animated.js', async: true},
 					       {src: 'plugin/math/math.js', async: true},
