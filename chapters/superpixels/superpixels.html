@@ -28,9 +28,9 @@
 <section data-background-image="imgs/backgrounds/gray-intro.png">
 <h3>Superpixels</h3>
 <ul>
-<li>Perceptually meaningful clusters for pixels</li>
-<li>They carry more information than pixels.</li>
-<li>They provide a convenient and compact representation of images that can be very useful for computationally demanding problems.</li>
+<li>Perceptually meaningful<b> <span class="fragment highlight-current-blue">clusters for pixels</span></b></li>
+<li>They carry more information than pixels</li>
+<li>They provide a convenient and <b><span class="fragment highlight-current-blue">compact representation of images</span></b> that can be very useful for computationally demanding problems.</li>
 </ul>
 <aside class="notes">
 Superpixels have a perceptual meaning since pixels belonging to a given superpixel share similar visual properties.<br>
@@ -67,9 +67,9 @@ Our goal: reduce the number of SPs without losing information by having bigger s
 <section data-background-image="imgs/backgrounds/gray-intro.png">
 	<h3>CONTRIBUTIONS</h3>
 	<ul>
-	<li>New boundary-aware initialization method for superpixel centers</li>
-	<li>New energy function (color, Euclidean + geodesic distances)</li>
-	<li>Exhaustive evaluation (7 datasets with 3 metrics)</li>
+	<li>New boundary-aware <b><span class="fragment highlight-current-blue">initialization method</span></b> for superpixel centers</li>
+	<li><b><span class="fragment highlight-current-blue">New energy function</span></b> (color, Euclidean + geodesic distances)</li>
+	<li>Exhaustive <span class="fragment highlight-current-blue">evaluation</span> (7 datasets with 3 metrics)</li>
 	<li>Better VOI than SoA with similar UE and BR</li>
 	</ul>
 </section>
@@ -315,11 +315,11 @@ $E_{geo}$: Distance Transform on Curved Spaces
 <section data-background-image="imgs/backgrounds/gray.png">
 <h2>Summary</h2>
 <ul>
-<li>Over-segmentation algorithm to compute superpixels aware of the boundary information</li>
-<li>Formulated as an iterative clustering problem using color, Euclidean and geodesic distance</li>
-<li>Evaluated against 3 SoA methods in 7 datasets</li>
-<li>Our algorithm outperforms SoA methods in the most significant metric according to our goal</li>
-<li>Implemented in C++, runs on CPU in ~0.5 secs/img</li>
-<li>Code publicly available</li>
+<li>Over-segmentation algorithm to compute superpixels <span class="fragment highlight-current-blue">aware of the boundary information</span></li>
+<li>Formulated as an <span class="fragment highlight-current-blue">iterative clustering</span> problem using color, Euclidean and geodesic distance</li>
+<li><span class="fragment highlight-current-blue">Evaluated against 3 SoA methods</span> in 7 datasets</li>
+<li>Our algorithm <span class="fragment highlight-current-blue">outperforms SoA methods</span> in the most significant metric according to our goal</li>
+<li>Implemented in C++, runs on CPU in <span class="fragment highlight-current-blue">~0.5 secs/img</span></li>
+<li>Code <span class="fragment highlight-current-blue">publicly available</span></li>
 </ul>
 </section>
