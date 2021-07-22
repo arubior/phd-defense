@@ -177,6 +177,11 @@ A seed is just a 5-dimensional vector with average values of all the pixels belo
   <img class="fragment current-visible" data-fragment-index="1" src="chapters/superpixels/imgs/seedeq/seedeq3.png">
   <img class="fragment current-visible" data-fragment-index="2" src="chapters/superpixels/imgs/seedeq/seedeq4.png">
 </div>
+<aside class="notes">
+This color space represents the color as three real values: L for lightness from 0 (black) to 100 (white), a from green to red
+and b from blue to yellow (values of a and b are implementation-specific, but are normally in the range of -100 to +100 or -128 to +127).
+It was designed to approximate the human perception, which makes it perfect for the task of superpixel segmentation, since we want our superpixels to be visually meaningful.
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/gray-method.png">
@@ -197,6 +202,11 @@ E_{lab} = dist\left((l_k, a_k, b_k), (l_i, a_i, b_i)\right)
 \begin{equation}
 E_{xy} = dist\left((x_k, y_k), (x_i, y_i)\right)
 \end{equation}
+<aside class="notes">
+This color space represents the color as three real values: L for lightness from 0 (black) to 100 (white), a from green to red
+and b from blue to yellow (values of a and b are implementation-specific, but are normally in the range of -100 to +100 or -128 to +127).
+It was designed to approximate the human perception, which makes it perfect for the task of superpixel segmentation, since we want our superpixels to be visually meaningful.
+</aside>
 </section>
 
 <section data-background-image="imgs/backgrounds/gray-method.png">
