@@ -239,6 +239,47 @@ Example of a context window of 2 words
 </table>
 </section>
 
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Quantitative results</h3>
+<small>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-18eh" rowspan="2">Architecture</th>
+    <th class="tg-18eh" colspan="2">Classification accuracy</th>
+  </tr>
+  <tr>
+    <td class="tg-18eh">Text</td>
+    <td class="tg-18eh">Image</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">1. Full Image</td>
+    <td class="tg-18eh">98.08%</td>
+    <td class="tg-18eh">90.06%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">2. Bounding boxes</td>
+    <td class="tg-wp8o">94.22%</td>
+    <td class="tg-wp8o">88.63%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3. 2 with overlap</td>
+    <td class="tg-wp8o">97.24%</td>
+    <td class="tg-wp8o">84.74%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">4. RoI pooling</td>
+    <td class="tg-wp8o">96.91%</td>
+    <td class="tg-wp8o">80.33%</td>
+  </tr>
+</tbody>
+</table>
+</small>
+</section>
+
+
 <section data-background-image="imgs/backgrounds/black-01.png">
 <h3>Superpixel segmentation</h3>
 <ul>
@@ -280,3 +321,48 @@ The dataset is challenging due to big size and extremely similar products
 <li>New term added to the loss to maximize the overlap with the GT box</li>
 </ul>
 </section>
+
+<section data-background-image="imgs/backgrounds/red-01.png">
+<h3>Network architecture</h3>
+<style type="text/css">
+#block1
+{
+    width: 50%;
+    float: left;
+}
+#block2
+{
+    width: 50%;
+    float: right;
+}
+#block3
+{
+    background-color: #F5F5F5;
+    margin: 10px 20px;
+    padding: 20px;
+    width: 400px;
+    float: right;
+}
+</style>
+<div id="block1">
+<ul>
+<li>Common parts:
+<ul>
+<li>Contrastive loss</li>
+<li>Classification loss</li>
+<li>Global loss</li>
+<li>Text network</li>
+</ul>
+</ul>
+</div>
+<div id="block2">
+<ul>
+<li>Different approaches:</li>
+<ul style="list-style-type:none;">
+<li>A. Full image</li>
+<li>B. Bounding boxes</li>
+<li>C. RoI pooling</li>
+</ul>
+</ul>
+</div>
+  </section>
